@@ -27,6 +27,12 @@ Require the JavaScripts in your `application.js.coffee`:
 #= require marionette-dialogregion-rails
 ```
 
+And add the base CSS files in `application.css.scss`:
+
+```css
+//= require colorbox
+```
+
 Then, in your Marionette app, you can declare a region to be a dialog by extending `Marionette.Region.Dialog` and providing a selector for the element you wish to use for your dialogs:
 
 ```coffeescript
