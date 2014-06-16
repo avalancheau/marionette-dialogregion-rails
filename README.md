@@ -46,7 +46,7 @@ Options
 Currently, there is only one option available, `closable`. It defaults to `true`, but if you make it `false`, the dialog will not be closable by clicking on the background overlay or pressing the Escape key:
 
 ```coffeescript
-view = new MyView fake: true
+view = new MyView closable: true
 App.dialogRegion.show view
 ```
 
