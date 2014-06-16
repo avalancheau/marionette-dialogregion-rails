@@ -21,6 +21,35 @@ gem marionette-dialogregion-rails
 
 And run `bundle install`.
 
+Require the JavaScripts in your `application.js.coffee`:
+
+```coffeescript
+#= require marionette-dialogregion-rails
+```
+
+Then, in your Marionette app, you can declare a region to be a dialog by extending `Marionette.Region.Dialog` and providing a selector for the element you wish to use for your dialogs:
+
+```coffeescript
+App.addRegions
+  dialogRegion: Marionette.Region.Dialog.extend el: "#dialog"
+```
+
+Now, when you show a view in that region, it will be displayed in a Colorbox lightbox:
+
+```coffeescript
+App.dialogRegion.show view
+```
+
+Options
+-------
+
+Currently, there is only one option available, `closable`. It defaults to `true`, but if you make it `false`, the dialog will not be closable by clicking on the background overlay or pressing the Escape key:
+
+```coffeescript
+view = new MyView fake: true
+App.dialogRegion.show view
+```
+
 Copyright and Licence
 ---------------------
 
