@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'marionette/dialogregion/rails/version'
+require 'marionette-dialogregion-rails/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "marionette-dialogregion-rails"
-  spec.version       = Marionette::Dialogregion::Rails::VERSION
+  spec.version       = Marionette::DialogRegion::Rails::VERSION
   spec.authors       = ["Louis Simoneau"]
   spec.email         = ["simoneau.louis@gmail.com"]
   spec.description   = %q{Colorbox dialog region for Marionette}
