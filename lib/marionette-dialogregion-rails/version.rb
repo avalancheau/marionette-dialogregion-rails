@@ -1,5 +1,5 @@
 module Marionette
-  module Dialogregion
+  module DialogRegion
     module Rails
       VERSION = "0.0.1"
     end
