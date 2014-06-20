@@ -30,5 +30,8 @@ do (Backbone, Marionette, $) ->
       @listenTo view, 'close', ->
         $.colorbox.remove()
 
+      @listenTo view, 'destroy', ->
+        $.colorbox.remove()
+
       @listenTo view, 'region:show', ->
         $.colorbox.resize()
