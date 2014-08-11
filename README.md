@@ -1,60 +1,11 @@
-marionette-dialogregion-rails
-=============================
+NOT SUPPORTED
+=============
 
-Custom Marionette region setup for dialogs/lightboxes, vendored for Rails projects using the asset pipeline. 
+Using ad-hoc Ruby gems to wrap front-end assets is not a good idea.
 
-Largely based on Brian Mann's [Building Dialogs with Custom Regions](http://www.backbonerails.com/screencasts/building-dialogs-with-custom-regions) screencast, with a few extra options to make the dialogs un-closeable and to work around issues opening consecutive dialogs with Colorbox.
+This gem will no longer be updated; you should include the [JavaScript library](https://github.com/avalancheau/marionette-dialogregion) directly or via [Bower](http://bower.io/).
 
-Dependencies
-------------
-
-Depends on Backbone, Marionette, and jQuery, since there are so many different solutions available to vendoring these assets, we don't provide one for you. The lightbox solution used, [colorbox](http://www.jacklmoore.com/colorbox/), _is_ included as we depend on some unreleased bug fixes. This may change in the future.
-
-Setup
------
-
-Add the gem to your `Gemfile`:
-
-```ruby
-gem marionette-dialogregion-rails
-```
-
-And run `bundle install`.
-
-Require the JavaScripts in your `application.js.coffee`:
-
-```coffeescript
-#= require marionette-dialogregion-rails
-```
-
-And add the base CSS files in `application.css.scss`:
-
-```css
-//= require colorbox
-```
-
-Then, in your Marionette app, you can declare a region to be a dialog by extending `Marionette.Region.Dialog` and providing a selector for the element you wish to use for your dialogs:
-
-```coffeescript
-App.addRegions
-  dialogRegion: Marionette.Region.Dialog.extend el: "#dialog"
-```
-
-Now, when you show a view in that region, it will be displayed in a Colorbox lightbox:
-
-```coffeescript
-App.dialogRegion.show view
-```
-
-Options
--------
-
-Currently, there is only one option available, `closable`. It defaults to `true`, but if you make it `false`, the dialog will not be closable by clicking on the background overlay or pressing the Escape key:
-
-```coffeescript
-view = new MyView closable: true
-App.dialogRegion.show view
-```
+For a simple way of including Bower packages in Rails via the asset pipeline, check out [rails-assets](http://rails-assets.org/).
 
 Copyright and Licence
 ---------------------
